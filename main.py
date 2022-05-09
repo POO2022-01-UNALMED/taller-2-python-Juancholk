@@ -38,15 +38,3 @@ class Motor:
     def asignarTipo(self, tipo):
         if tipo=="electrico" or tipo=="gasolina":
             self.tipo =tipo
-    if __name__ == "__main__":
-        a1 = Asiento("blanco", 5000, 435)
-        a2 = Asiento("blanco", 5000, 435)
-      
-        a1.cambiarColor("naranja")
-        a2.cambiarColor("verde")
-      
-        ok = False
-      
-        if(a1.color == "blanco" and a2.color == "verde"):
-             ok = True
-        print(ok)
