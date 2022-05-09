@@ -4,16 +4,16 @@ class Asiento:
         self.presio = precio
         self.registro = registro
     def cambiarColor(self, color):
-        if color=="rojo":
+        if self.color=="rojo":
             self.color="rojo"
-        elif color=="verde":
+        elif self.color=="verde":
             self.color=="verde"
-        elif color=="amarillo":
+        elif self.color=="amarillo":
             self.color="amarillo"
-        elif color=="negro":
+        elif self.color=="negro":
             self.color="negro"
         else:
-            if color=="blanco":     
+            if self.color=="blanco":     
                 self.color="blanco"
 class Auto:
     cantidadCreados=0
