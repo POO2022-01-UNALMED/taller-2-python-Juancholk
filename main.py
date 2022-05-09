@@ -4,18 +4,9 @@ class Asiento:
         self.presio = precio
         self.registro = registro
     def cambiarColor(self, color):
-        if self.color=="rojo":
-            self.color="rojo"
-        elif self.color=="verde":
-            self.color=="verde"
-        elif self.color=="amarillo":
-            self.color="amarillo"
-        elif self.color=="negro":
-            self.color="negro"
-        else:
-            if self.color=="blanco":     
-                self.color="blanco"
-class Auto:
+        if color=="rojo" or color=="verde" or color=="amarillo" or color=="negro" or color=="blanco":
+            self.color=color
+       
     cantidadCreados=0
     def __init__(self,modelo,precio,asientos,marca,motor,registro):
         self.modelo = modelo
@@ -27,7 +18,7 @@ class Auto:
     def cantidadAsientos(self):
         for i in range(len(self.asientos)):
             if self.asientos[i]!=None:
-                cantidadCreados=cantidadCreados+1
+                Auto.cantidadCreados=Auto.cantidadCreados+1
     def verificarIntegridad(self):
         for i in range(len(self.asientos)):
             if self.asientos[i]!=None:
@@ -47,4 +38,15 @@ class Motor:
     def asignarTipo(self, tipo):
         if tipo=="electrico" or tipo=="gasolina":
             self.tipo =tipo
-    
+    if __name__ == "__main__":
+        a1 = Asiento("blanco", 5000, 435)
+        a2 = Asiento("blanco", 5000, 435)
+      
+        a1.cambiarColor("naranja")
+        a2.cambiarColor("verde")
+      
+        ok = False
+      
+        if(a1.color == "blanco" and a2.color == "verde"):
+             ok = True
+        print(ok)
