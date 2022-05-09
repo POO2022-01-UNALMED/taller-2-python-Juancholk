@@ -26,7 +26,7 @@ class Auto:
                 if self.asientos[i].registro==self.motor.registro:
                     continue
                 else:
-                    return "Las piezas no sonoriginales"
+                    return "Las piezas no son originales"
         if self.registro==self.motor.registro:
             return "Auto original"
 class Motor:
@@ -40,7 +40,17 @@ class Motor:
         if tipo=="electrico" or tipo=="gasolina":
             self.tipo =tipo
 
-#if __name__ == "__main__":
-
+'''if __name__ == "__main__":
+    a1 = Auto("model 3", 33000, [Asiento("blanco", 5000, 32),None, None, Asiento("blanco", 5000, 32), None],
+          "tesla", Motor(4, "electrico", 32), 32)
+    a2 = Auto("model 3", 33000, [Asiento("blanco", 5000, 40),None, None, Asiento("blanco", 5000, 32), None],
+          "tesla", Motor(4, "electrico", 32), 32)
       
+    ok = False
+      
+    if(a1.verificarIntegridad() == "Auto original" and a2.verificarIntegridad() == "Las piezas no son originales"):
+        ok = True
+      
+    assert(ok)
+'''
 
