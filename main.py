@@ -19,6 +19,7 @@ class Auto:
         for i in range(len(self.asientos)):
             if self.asientos[i]!=None:
                 Auto.cantidadCreados=Auto.cantidadCreados+1
+        return Auto.cantidadCreados
     def verificarIntegridad(self):
         for i in range(len(self.asientos)):
             if self.asientos[i]!=None:
@@ -38,3 +39,8 @@ class Motor:
     def asignarTipo(self, tipo):
         if tipo=="electrico" or tipo=="gasolina":
             self.tipo =tipo
+
+#if __name__ == "__main__":
+
+      
+
